@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Setting container to flex and width 80% */
+.container{
+    display: flex;
+   
+    width: 90vw;
+    /* margin-left:5%;
+    margin-right: 5%; */
+    margin:5%;
+}
+
+
+
+
+
+/* Background properties and transition effect to sectiion */
+.section{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    flex:0.2;
+    margin:8px;
+    border-radius:50px;
+    position: relative;
+    /* transition: all 0.7s ease-in; */
+    transition: flex 0.7s ease-in;
+
+}
+
+/* to position text inside the picture */
+.section h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    color: #fff;
+  }
+
+
+  /* to add transition to the text inside the pictures */
+  
+   .section.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+
+/* Adding background image to each section */
+
+.one{
+    background:url(../img/one.jpg);
+    
+
+
+}
+
+#first{
+    transition: width 5.2s background-color 3.5s;
+}
+
+
+.two{
+    background: url(../img/two.jpg);
+}
+
+.three{
+    background: url(../img/three.jpg);
+}
+
+.four{
+    background: url(../img/four.jpg);
+}
+
+
+/* section with active class will grow flex to 3 times */
+.section.active{
+    flex:4;
+}
+
+
+/* transtion on each section */
+
+/* 
+.light-blue {
+    transition: background-color 0.5s ease;
+    background-color: red;
+  } */
+
+
+
+@media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+
+    
+}
